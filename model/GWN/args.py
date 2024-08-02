@@ -6,7 +6,9 @@ from lib.predifineGraph import get_adjacency_matrix, load_pickle, weight_matrix
 def parse_args(DATASET, parser):
     # get configuration
     config_file = '../conf/GWN/{}.conf'.format(DATASET)
+    print(DATASET)
     config = configparser.ConfigParser()
+    print(config_file)
     config.read(config_file)
 
     # data

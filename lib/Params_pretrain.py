@@ -18,8 +18,10 @@ def parse_args(device):
 
     # get configuration
     config_file = '../conf/GPTST_pretrain/{}.conf'.format(args_get.dataset)
+    print(args_get.dataset)
     config = configparser.ConfigParser()
     config.read(config_file)
+    print(config_file)
 
     # data
     args.add_argument('-val_ratio', default=config['data']['val_ratio'], type=float)
